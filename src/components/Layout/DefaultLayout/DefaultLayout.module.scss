@@ -1,0 +1,74 @@
+// Trong Flexbox:
+// Main axis (trục chính): hướng mà các item xếp theo (flex-direction quyết định).
+// Cross axis (trục chéo): vuông góc với trục chính.
+
+// 📌 Trong flex-direction: row, nó căn ngang.
+// 📌 Trong flex-direction: column, nó căn dọc.
+
+//////////////////////////////////////////////////////////////////
+
+// justify-content: Điều khiển cách các item được phân bố dọc theo main axis.
+// Các giá trị thường dùng:
+
+// flex-start → dồn về đầu trục.
+
+// flex-end → dồn về cuối trục.
+
+// center → căn giữa.
+
+// space-between → chia đều, không khoảng ở 2 mép.
+
+// space-around → khoảng đều, mép ngoài bằng nửa khoảng giữa.
+
+// space-evenly → khoảng đều cả trong lẫn ngoài.
+
+//////////////////////////////////////////////////////////////////
+ 
+// align-items: Điều khiển vị trí của các item theo cross axis.
+// Các giá trị thường dùng:
+
+// stretch (default) → kéo giãn item cho đầy cross axis.
+
+// flex-start → dồn về đầu trục chéo.
+
+// flex-end → dồn về cuối trục chéo.
+
+// center → căn giữa trục chéo.
+
+// baseline → căn theo đường baseline chữ.
+
+//////////////////////////////////////////////////////////////////
+
+// align-content — Căn trên trục chéo, nhưng áp dụng cho nhiều hàng
+// Chỉ hoạt động khi flex-wrap: wrap và có nhiều hàng/ cột.
+
+// Các giá trị: tương tự justify-content (flex-start, flex-end, center, space-between, space-around, space-evenly).
+
+//////////////////////////////////////////////////////////////////
+
+// align-self — Căn riêng 1 item trên trục chéo
+// Ghi đè align-items nhưng chỉ áp dụng cho 1 phần tử con.
+
+//////////////////////////////////////////////////////////////////
+
+// | Thuộc tính        | Trục áp dụng | Phạm vi tác động | Ghi chú              |
+// | ----------------- | ------------ | ---------------- | -------------------- |
+// | `justify-content` | Main axis    | Toàn bộ item     | Căn theo chiều chính |
+// | `align-items`     | Cross axis   | Toàn bộ item     | Căn theo chiều phụ   |
+// | `align-content`   | Cross axis   | Khi nhiều dòng   | Căn cả nhóm dòng     |
+// | `align-self`      | Cross axis   | Một item cụ thể  | Ghi đè `align-items` |
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: var(--default-layout-width);
+    display: flex;
+}
+
+.content {
+    flex: 1;
+}
