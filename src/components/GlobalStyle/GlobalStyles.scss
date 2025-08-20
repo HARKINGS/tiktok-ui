@@ -1,11 +1,11 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&display=swap');
 
 :root {
     --primary: #fe2c55;
     --black: #000;
     --white: #fff;
-    --text-color: #333;
+    --text-color: #161823;
 
     // Default layout
     --default-layout-header-height: 60px;
@@ -41,4 +41,32 @@ input,
 a[href] {
     color: var(--text-color);
     text-decoration: none;
+}
+
+// Custom tippy tooltip
+body 
+{
+    .tippy-box {
+        background-color: rgba(84, 84, 84, 0.92);
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+
+    .tippy-content {
+        padding: 8px 9px;
+    }
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+
+    // [data-placement^='bottom'] = chọn các tooltip có vị trí bắt đầu bằng "bottom" (ví dụ bottom, bottom-start, bottom-end).
+    // > .tippy-arrow:before = chọn pseudo-element :before của mũi tên.
+    // top: -8px; = đẩy mũi tên lên 8px để nó gắn sát vào hộp tooltip.
+    // Nếu tooltip hiển thị ở dưới (bottom), thì chỉnh vị trí mũi tên cho khớp.
+    .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
+        top: -8px;
+    }
 }
