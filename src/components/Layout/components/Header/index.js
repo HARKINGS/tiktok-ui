@@ -8,8 +8,6 @@ import {
   faEarthAsia,
   faCircleQuestion,
   faKeyboard,
-  faCloudUpload,
-  faMessage,
   faUser,
   faCoins,
   faGear,
@@ -26,6 +24,8 @@ import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
+import { MessageIcon, NotificationIcon, UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -144,7 +144,21 @@ function Header() {
               <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
                 <div>
                   <button className={cx('action-btn')}>
-                    <FontAwesomeIcon icon={faCloudUpload} />
+                    <UploadIcon />
+                  </button>
+                </div>
+              </Tippy>
+              <Tippy delay={[0, 200]} content="Message" placement="bottom">
+                <div>
+                  <button className={cx('action-btn')}>
+                    <MessageIcon />
+                  </button>
+                </div>
+              </Tippy>
+              <Tippy delay={[0, 200]} content="Notification" placement="bottom">
+                <div>
+                  <button className={cx('action-btn')}>
+                    <NotificationIcon />
                   </button>
                 </div>
               </Tippy>
@@ -152,16 +166,19 @@ function Header() {
           ) : (
             <>
               <Button text>Upload</Button>
+              <Button text>Message</Button>
+              <Button text>Notification</Button>
               <Button primary>Login</Button>
             </>
           )}
 
           <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
             {currentUser ? (
-              <img
+              <Image
                 className={cx('user-avatar')}
                 alt="XLR-8"
                 src="https://lh3.googleusercontent.com/a/ACg8ocLj85h1jv8YGcrrrf4ZeXifFi-c7bgsO9lyqp9-3REObOGvvEo=s360-c-no"
+                fallBack="https://linkimage.com/cdn/shop/products/Poppyno45_900x.jpg?v=1651519879"
               />
             ) : (
               <button className={cx('more-btn')}>
