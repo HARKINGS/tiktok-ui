@@ -19,7 +19,6 @@ export const MessageIcon = ({ width = '3.2rem', height = '3.2rem', className }) 
     <svg
       className={className}
       fill="currentColor"
-      class="css-kmm27i-StyledMessageIcon e1wd0gfs0"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
       width={width}
@@ -35,7 +34,7 @@ export const NotificationIcon = ({ width = '3.2rem', height = '3.2rem', classNam
     <svg
       className={className}
       fill="currentColor"
-      font-size="32px"
+      fontSize="32px"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
       width={width}
