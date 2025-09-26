@@ -1,4 +1,4 @@
-import Header from '~/components/Layout/components/Header';
+// import Header from '~/layouts/components/Header';
 // C1 tao layout
 function Upload() {
   return <h2>Upload Page</h2>;
