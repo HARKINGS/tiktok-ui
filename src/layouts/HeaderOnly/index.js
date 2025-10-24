@@ -1,4 +1,5 @@
 import Header from '~/layouts/components/Header';
+import PropTypes from 'prop-types'
 
 function HeaderOnly({ children }) {
   return (
@@ -9,6 +10,10 @@ function HeaderOnly({ children }) {
       </div>
     </div>
   );
+}
+
+HeaderOnly.propTypes = {
+  children: PropTypes.node.isRequired
 }
 
 export default HeaderOnly;
