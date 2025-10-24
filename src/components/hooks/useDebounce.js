@@ -1,4 +1,3 @@
-import { clear } from "@testing-library/user-event/dist/clear";
 import { useEffect, useState } from "react";
 
 function useDebounce(value, delay) {

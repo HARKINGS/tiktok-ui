@@ -159,7 +159,7 @@ const MENU_ITEMS = [
 ];
 
 function Header() {
-  const currentUser = true; // Simulating a logged-in user
+  const currentUser = false; // Simulating a logged-in user
   const handleMenuChange = (menuItem) => {
     // console.log(menuItem);
     switch (menuItem.type) {
@@ -233,7 +233,7 @@ function Header() {
               <Button text>Upload</Button>
               <Button text>Message</Button>
               <Button text>Notification</Button>
-              <Button primary>Login</Button>
+              <Button primary to='/'>Login</Button>
             </>
           )}
 
